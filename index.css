@@ -49,7 +49,15 @@ background-color: #f75f5f
    header nav form{
     margin-top: 10px;
    }
+   .details{
+ 
+    background-color: rgb(149, 218, 31);
    
+   width: 100%;
+   height: 90px;
+   }
+
+
 }
 .item{
 
@@ -205,6 +213,9 @@ background-color: #f75f5f
     .cross:hover{
         background-color: #e37359;
     }
+    
+ 
+   
     
  
    
