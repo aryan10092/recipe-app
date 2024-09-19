@@ -7,10 +7,16 @@ fetchd();
 search.addEventListener(`click`,(x)=>{
     x.preventDefault();
     const sinput=input.value;
+    if(!sinput){
+        alldata.innerHTML=`<h2 style="color:white">Type the food in search box </h2>`
+        
+        return;
+    }
     fetchdata(sinput);
 })
 
 async function fetchdata(s){
+    try{
 const response=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${s}`);
 const value= await response.json()
 alldata.innerHTML=""
@@ -40,6 +46,10 @@ tex.classList.add(`it`)
    
     
 });}
+catch(error){
+
+alldata.innerHTML=`<h2 style="color:white"> food not found</h2>`
+}}
  function fetchIngredients(mea){
     let ingred="";
     for(let i =1;i<40 ;i++){
